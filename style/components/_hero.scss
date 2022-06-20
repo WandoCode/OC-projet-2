@@ -1,0 +1,12 @@
+@use "../util" as u;
+@use "../globals/colors" as c;
+
+.hero {
+  height: u.rem(280);
+  padding: u.rem(40) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: c.$background-light-clr;
+}

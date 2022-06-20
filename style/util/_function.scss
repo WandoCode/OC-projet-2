@@ -1,0 +1,26 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error "The variable for this function cannot use units; only numbers";
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  } @else {
+    @error "The variable for this function cannot use units; only numbers";
+  }
+}
+
+@function remvw($pixel, $vw) {
+  @if math.is-unitless($pixel) and math.is-unitless($vw) {
+    $vw-unit: ($vw + vw);
+    @return calc(rem($pixel) + $vw-unit);
+  } @else {
+    @error "The variable for this function cannot use units; only numbers";
+  }
+}

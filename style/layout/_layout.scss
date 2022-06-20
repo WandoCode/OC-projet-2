@@ -1,0 +1,15 @@
+// Define the main style of the body(/main/header/footer)
+// Remember clamp() and/or min()/ max();
+// Remember: EVERTHING in REM
+@use "../util" as u;
+header {
+  height: u.rem(65);
+  width: min(100%, 1440px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: min(100%, 1440px);
+}

@@ -1,0 +1,37 @@
+// h1, h2, h3 etc. style
+// Assign font family here
+// Remember: for font size, use vw (ex: font-size: 1.75rem + 2 vw) and clamp
+@use "../util" as u;
+body,
+button {
+  @include u.font("Roboto");
+}
+
+.h1 {
+  font-weight: 900;
+  font-size: u.remvw(20, 1);
+  text-align: center;
+}
+
+.h2 {
+  font-size: u.remvw(14, 1);
+  font-weight: 300;
+  text-align: center;
+}
+
+.location {
+  &__text {
+    @include u.font("Roboto");
+    font-size: u.remvw(12, 1);
+    font-weight: 700;
+  }
+  &__icon {
+    font-size: u.remvw(13, 1);
+  }
+}
+
+.btn {
+  font-size: u.remvw(12, 1);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}

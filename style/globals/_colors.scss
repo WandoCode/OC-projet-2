@@ -1,0 +1,13 @@
+// variables
+$primary-clr: #9356dc;
+$secondary-clr: #ff79da;
+$tertiary-clr: #99e2d0;
+$background-clr: hsl(0, 0%, 92%);
+$background-light-clr: hsl(0, 0%, 96%);
+$text-clr: hsl(0, 0%, 0%);
+
+// class modifiers
+
+.light {
+  color: lighten($text-clr, 20%);
+}

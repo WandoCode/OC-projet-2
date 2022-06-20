@@ -1,0 +1,28 @@
+@use "../util/function" as u;
+
+// Using rem normally, but sometimes bug happens. With em, it's working fine. No difference between em or rem for media queries ==> em
+// 700px, 900px, 1440px. Mobile is default style.
+$breakpoints-up: (
+  "medium": u.em(700),
+  "large": u.em(900),
+  "xlarge": u.em(1440),
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+// 699.98px, 899.98px, 1439.98px. Xlarge screen is default style.
+$breakpoints-down: (
+  "small": u.em(699.98),
+  "medium": u.em(899.98),
+  "large": u.em(1439.98),
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
