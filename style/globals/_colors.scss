@@ -1,7 +1,9 @@
 // variables
-$primary-clr: #9356dc;
+$primary-clr: hsl(267, 66%, 60%);
+$primary-light-clr: hsl(267, 100%, 96%);
 $secondary-clr: #ff79da;
-$tertiary-clr: #99e2d0;
+$tertiary-clr: hsl(165, 56%, 74%);
+$tertiary-dark-clr: hsl(165, 100%, 26%);
 $background-clr: hsl(0, 0%, 92%);
 $background-light-clr: hsl(0, 0%, 96%);
 $text-clr: hsl(0, 0%, 0%);
@@ -10,4 +12,8 @@ $text-clr: hsl(0, 0%, 0%);
 
 .light {
   color: lighten($text-clr, 20%);
+}
+
+.primary-light {
+  background-color: hsl(267, 100%, 96%);
 }

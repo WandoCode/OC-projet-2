@@ -2,9 +2,12 @@
 // Assign font family here
 // Remember: for font size, use vw (ex: font-size: 1.75rem + 2 vw) and clamp
 @use "../util" as u;
+@use "./colors" as c;
+
 body,
 button {
   @include u.font("Roboto");
+  font-size: u.remvw(11.25, 1);
 }
 
 .h1 {
@@ -33,5 +36,27 @@ button {
 .btn {
   font-size: u.remvw(12, 1);
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
 }
+
+h2.section {
+  font-size: u.remvw(21, 1);
+  letter-spacing: -0.3px;
+}
+
+.numerotation {
+  font-size: u.remvw(9, 1);
+}
+
+.instruction {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: u.remvw(11.7, 1);
+}
+
+.sticker {
+  color: c.$tertiary-dark-clr;
+  font-size: u.remvw(10.7, 1);
+  font-weight: 600;
+}
+// Faire attention de donner un classe specifique pour modifier la typo, ne pas prendre la meme que dans le 'component'

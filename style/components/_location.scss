@@ -2,12 +2,12 @@
 @use "../globals/colors" as c;
 
 .location {
-  height: u.rem(53);
+  height: u.rem(50);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: c.$background-clr;
-  box-shadow: inset 0px 5px 7px -4px darken(c.$background-clr, 25%);
+  box-shadow: inset 0px 5px 7px -5px darken(c.$background-clr, 25%);
 
   &__container {
     display: flex;

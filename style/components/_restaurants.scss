@@ -1,4 +1,50 @@
+@use "../util/" as u;
+@use "../globals/colors" as c;
 .restaurants {
+  background-color: c.$background-light-clr;
+
   &__container {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(19) 0;
+  }
+  & .card {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+      object-fit: cover;
+      object-position: bottom;
+      height: 175px;
+      width: 100%;
+    }
+
+    &__sticker {
+      margin: 4%;
+      padding: 1.9% 3.5%;
+      background-color: c.$tertiary-clr;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 2px;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__icone,
+    &__text__left-container {
+      flex-grow: 1;
+    }
   }
 }

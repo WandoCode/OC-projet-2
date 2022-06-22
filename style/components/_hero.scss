@@ -2,11 +2,21 @@
 @use "../globals/colors" as c;
 
 .hero {
-  height: u.rem(280);
-  padding: u.rem(40) 0;
+  height: u.rem(287);
+  padding: u.rem(39) 0 u.rem(57) 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: c.$background-light-clr;
+
+  & .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110px;
+    & h1 {
+      padding: 0 12%;
+    }
+  }
 }

@@ -1,0 +1,9 @@
+@use "../util/" as u;
+
+h2.section {
+  margin-bottom: u.rem(30);
+
+  &--mg-lg {
+    margin: u.rem(6) 0 u.rem(22);
+  }
+}
