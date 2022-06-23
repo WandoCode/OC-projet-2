@@ -59,4 +59,12 @@ h2.section {
   font-size: u.remvw(10.7, 1);
   font-weight: 600;
 }
+
+.h3 {
+  font-size: u.remvw(14, 1);
+}
+
+.text-lg {
+  font-size: u.remvw(13, 1);
+}
 // Faire attention de donner un classe specifique pour modifier la typo, ne pas prendre la meme que dans le 'component'

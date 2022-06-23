@@ -1,5 +1,6 @@
 @use "../util/" as u;
 @use "../globals/colors" as c;
+
 .restaurants {
   background-color: c.$background-light-clr;
 
@@ -23,6 +24,10 @@
       object-position: bottom;
       height: 175px;
       width: 100%;
+
+      &--center {
+        object-position: center 60%;
+      }
     }
 
     &__sticker {
@@ -40,9 +45,46 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      padding-left: 13px;
     }
 
-    &__icone,
+    &__icone {
+      width: 78px;
+      display: flex;
+      justify-content: center;
+      font-size: 23px;
+      padding-bottom: 10px;
+
+      & .check-active {
+        display: none;
+        color: c.$primary-clr;
+      }
+      & .check-inactive {
+        transition: 0.1s;
+        &:hover {
+          transform: scale(1.2);
+        }
+        &:active {
+          font-size: 12px;
+          opacity: 50%;
+        }
+      }
+
+      & input[type="checkbox"] {
+        height: 0;
+        width: 0;
+      }
+
+      & input:checked ~ .check-inactive {
+        display: none;
+      }
+
+      & input:checked ~ .check-active {
+        display: inline;
+        animation: fadeIn 0.1s ease-in forwards;
+      }
+    }
+
     &__text__left-container {
       flex-grow: 1;
     }
