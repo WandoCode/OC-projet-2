@@ -14,6 +14,15 @@ main {
   width: min(100%, 1440px);
 }
 
+footer {
+  height: 200px;
+  & .footer--container {
+    width: min(100%, 1440px);
+    height: 100%;
+    padding: u.rem(27);
+  }
+}
+
 section {
   padding: u.rem(46) u.rem(19);
 }

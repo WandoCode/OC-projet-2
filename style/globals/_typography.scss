@@ -67,4 +67,8 @@ h2.section {
 .text-lg {
   font-size: u.remvw(13, 1);
 }
+
+.footer {
+  color: white;
+}
 // Faire attention de donner un classe specifique pour modifier la typo, ne pas prendre la meme que dans le 'component'
