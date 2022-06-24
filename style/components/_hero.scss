@@ -32,4 +32,14 @@
       }
     }
   }
+  @include u.breakpoint(large) {
+    & {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .titles {
+        height: 70%;
+      }
+    }
+  }
 }

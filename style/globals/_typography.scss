@@ -14,12 +14,19 @@ button {
   font-weight: 900;
   font-size: 24px;
   text-align: center;
+  @include u.breakpoint(large) {
+    font-size: 30px;
+  }
 }
 
 .h2 {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+
+  @include u.breakpoint(large) {
+    font-size: 21px;
+  }
 }
 
 .location {
@@ -37,6 +44,9 @@ button {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.2px;
+  @include u.breakpoint(large) {
+    font-size: 20px;
+  }
 }
 
 h2.section {
@@ -46,11 +56,17 @@ h2.section {
 
 .numerotation {
   font-size: 13px;
+  @include u.breakpoint(large) {
+    font-size: 15px;
+  }
 }
 
 .instruction {
   font-weight: 800;
   font-size: 16px;
+  @include u.breakpoint(large) {
+    font-size: 18px;
+  }
 }
 
 .sticker {

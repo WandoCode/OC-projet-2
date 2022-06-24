@@ -49,9 +49,26 @@
         color: c.$primary-clr;
       }
     }
+  }
 
-    @include u.breakpoint(medium) {
-      border: none;
+  @include u.breakpoint(large) {
+    & {
+      height: 350px;
+    }
+    & .etapes-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      height: 70%;
+      margin: auto 0;
+    }
+    & .etape {
+      white-space: nowrap;
+      width: 25%;
+      min-width: 270px;
+      &__icone {
+        font-size: 20px;
+      }
     }
   }
 }

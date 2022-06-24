@@ -16,9 +16,13 @@
     width: 100vw;
   }
 
+  90% {
+    opacity: 1;
+  }
   100% {
     height: 100vh;
     width: 100vw;
+    opacity: 0;
   }
 }
 
@@ -31,5 +35,15 @@
   }
   100% {
     width: min(85%, 500px);
+  }
+}
+
+@keyframes jump-out {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    transform: scale(0.1) translateY(-100%);
   }
 }

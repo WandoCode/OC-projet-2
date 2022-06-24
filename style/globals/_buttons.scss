@@ -1,5 +1,6 @@
 @use "../util" as u;
 @use "../globals/colors" as c;
+
 .btn {
   position: relative;
   color: white;
@@ -17,4 +18,10 @@
       lighten(c.$primary-clr, 5%) 100%
     );
   }
+
+  @include u.breakpoint(large) {
+    padding: 24px 30px;
+  }
 }
+
+// TODO: L'ombre doit changer au survol?

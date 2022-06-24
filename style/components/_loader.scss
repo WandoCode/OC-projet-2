@@ -16,6 +16,7 @@
     margin: 0 auto;
     top: 10%;
     width: min(85%, 500px);
+    animation: slide-up-small 0.5s 2.5s;
   }
 
   & .load-bar {
@@ -31,7 +32,9 @@
       c.$secondary-clr 0%,
       c.$primary-clr 100%
     );
-    animation: up-down 2s infinite ease-out;
+    animation: up-down 2s 3 ease-out;
     animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
   }
 }
+
+//  TODO: Remettre le loader

@@ -27,6 +27,7 @@
       object-fit: cover;
       object-position: bottom;
       height: 175px;
+      min-height: 175px;
       width: 100%;
 
       &--center {
@@ -50,6 +51,7 @@
       width: 100%;
       height: 100%;
       padding-left: 13px;
+      white-space: nowrap;
     }
 
     &__icone {
@@ -64,7 +66,7 @@
         color: c.$primary-clr;
       }
       & .check-inactive {
-        transition: 0.1s;
+        transition: 0.3s;
         &:hover {
           transform: scale(1.2);
         }
@@ -85,7 +87,7 @@
 
       & input:checked ~ .check-active {
         display: inline;
-        animation: fadeIn 0.1s ease-in forwards;
+        animation: fadeIn 0.3s ease-in forwards;
       }
     }
 
@@ -99,6 +101,14 @@
       & .card {
         width: 45%;
         flex-grow: 1;
+      }
+    }
+  }
+
+  @include u.breakpoint(large) {
+    & {
+      & .card {
+        width: 20%;
       }
     }
   }

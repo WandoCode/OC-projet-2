@@ -19,4 +19,11 @@
     left: -28%;
     bottom: 10%;
   }
+  @include u.breakpoint(large) {
+    position: absolute;
+    top: -63px;
+    right: 0;
+    height: 63px;
+    width: 250px;
+  }
 }

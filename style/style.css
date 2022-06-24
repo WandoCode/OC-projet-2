@@ -40,11 +40,21 @@ button {
   font-size: 24px;
   text-align: center;
 }
+@media (min-width: 56.25em) {
+  .h1 {
+    font-size: 30px;
+  }
+}
 
 .h2 {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+}
+@media (min-width: 56.25em) {
+  .h2 {
+    font-size: 21px;
+  }
 }
 
 .location__text {
@@ -61,6 +71,11 @@ button {
   font-weight: 400;
   letter-spacing: 0.2px;
 }
+@media (min-width: 56.25em) {
+  .btn {
+    font-size: 20px;
+  }
+}
 
 h2.section {
   font-size: 25px;
@@ -70,10 +85,20 @@ h2.section {
 .numerotation {
   font-size: 13px;
 }
+@media (min-width: 56.25em) {
+  .numerotation {
+    font-size: 15px;
+  }
+}
 
 .instruction {
   font-weight: 800;
   font-size: 16px;
+}
+@media (min-width: 56.25em) {
+  .instruction {
+    font-size: 18px;
+  }
 }
 
 .sticker {
@@ -107,6 +132,11 @@ h2.section {
 .btn:hover {
   cursor: pointer;
   background: linear-gradient(160deg, #ff93e1 0%, #a06be1 100%);
+}
+@media (min-width: 56.25em) {
+  .btn {
+    padding: 24px 30px;
+  }
 }
 
 h2.section {
@@ -146,9 +176,13 @@ h2.section--mg-lg {
     height: 100vh;
     width: 100vw;
   }
+  90% {
+    opacity: 1;
+  }
   100% {
     height: 100vh;
     width: 100vw;
+    opacity: 0;
   }
 }
 @keyframes loader {
@@ -156,9 +190,13 @@ h2.section--mg-lg {
     height: 100vh;
     width: 100vw;
   }
+  90% {
+    opacity: 1;
+  }
   100% {
     height: 100vh;
     width: 100vw;
+    opacity: 0;
   }
 }
 @-webkit-keyframes up-down {
@@ -183,18 +221,41 @@ h2.section--mg-lg {
     width: min(85%, 500px);
   }
 }
+@-webkit-keyframes jump-out {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: scale(0.1) translateY(-100%);
+  }
+}
+@keyframes jump-out {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: scale(0.1) translateY(-100%);
+  }
+}
 header {
-  height: 3.9375rem;
-  width: 100%;
+  height: 63px;
+  width: min(100%, 1440px);
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
+@media (min-width: 56.25em) {
+  header {
+    justify-content: flex-start;
+  }
+}
 
 main {
+  position: relative;
   width: 100%;
   margin: 0 auto;
+  width: min(100%, 1440px);
 }
 
 footer {
@@ -203,7 +264,7 @@ footer {
 footer .footer--container {
   width: min(100%, 1440px);
   height: 100%;
-  padding: 1.6875rem;
+  padding: 27px;
   margin: 0 auto;
 }
 
@@ -230,6 +291,8 @@ section {
   margin: 0 auto;
   top: 10%;
   width: min(85%, 500px);
+  -webkit-animation: slide-up-small 0.5s 2.5s;
+          animation: slide-up-small 0.5s 2.5s;
 }
 .screen-loader .load-bar {
   position: absolute;
@@ -240,8 +303,8 @@ section {
   height: 10px;
   border-radius: 5px;
   background: linear-gradient(160deg, #ff79da 0%, hsl(267deg, 66%, 60%) 100%);
-  -webkit-animation: up-down 2s infinite ease-out;
-          animation: up-down 2s infinite ease-out;
+  -webkit-animation: up-down 2s 3 ease-out;
+          animation: up-down 2s 3 ease-out;
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
           animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
 }
@@ -249,6 +312,11 @@ section {
 .logo {
   height: 45%;
   margin-top: 10px;
+}
+@media (min-width: 56.25em) {
+  .logo {
+    margin-left: 8%;
+  }
 }
 
 .restaurants {
@@ -278,6 +346,7 @@ section {
   -o-object-position: bottom;
      object-position: bottom;
   height: 175px;
+  min-height: 175px;
   width: 100%;
 }
 .restaurants .card__img--center {
@@ -299,6 +368,7 @@ section {
   width: 100%;
   height: 100%;
   padding-left: 13px;
+  white-space: nowrap;
 }
 .restaurants .card__icone {
   width: 78px;
@@ -312,7 +382,7 @@ section {
   color: hsl(267deg, 66%, 60%);
 }
 .restaurants .card__icone .check-inactive {
-  transition: 0.1s;
+  transition: 0.3s;
 }
 .restaurants .card__icone .check-inactive:hover {
   transform: scale(1.2);
@@ -330,8 +400,8 @@ section {
 }
 .restaurants .card__icone input:checked ~ .check-active {
   display: inline;
-  -webkit-animation: fadeIn 0.1s ease-in forwards;
-          animation: fadeIn 0.1s ease-in forwards;
+  -webkit-animation: fadeIn 0.3s ease-in forwards;
+          animation: fadeIn 0.3s ease-in forwards;
 }
 .restaurants .card__text__left-container {
   flex-grow: 1;
@@ -340,6 +410,11 @@ section {
   .restaurants .card {
     width: 45%;
     flex-grow: 1;
+  }
+}
+@media (min-width: 56.25em) {
+  .restaurants .card {
+    width: 20%;
   }
 }
 
@@ -367,6 +442,15 @@ section {
   position: absolute;
   left: -28%;
   bottom: 10%;
+}
+@media (min-width: 56.25em) {
+  .location {
+    position: absolute;
+    top: -63px;
+    right: 0;
+    height: 63px;
+    width: 250px;
+  }
 }
 
 .hero {
@@ -396,6 +480,15 @@ section {
   }
   .hero .titles h1 {
     padding: 0 5%;
+  }
+}
+@media (min-width: 56.25em) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .hero .titles {
+    height: 70%;
   }
 }
 
@@ -446,9 +539,24 @@ section {
 .fonctionnement .etape:hover .etape__icone {
   color: hsl(267deg, 66%, 60%);
 }
-@media (min-width: 43.75em) {
+@media (min-width: 56.25em) {
+  .fonctionnement {
+    height: 350px;
+  }
+  .fonctionnement .etapes-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 70%;
+    margin: auto 0;
+  }
   .fonctionnement .etape {
-    border: none;
+    white-space: nowrap;
+    width: 25%;
+    min-width: 270px;
+  }
+  .fonctionnement .etape__icone {
+    font-size: 20px;
   }
 }
 
