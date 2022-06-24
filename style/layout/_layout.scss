@@ -4,7 +4,7 @@
 @use "../util" as u;
 header {
   height: u.rem(63);
-  width: min(100%, 1440px);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ header {
 }
 
 main {
-  width: min(100%, 1440px);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -27,5 +27,7 @@ footer {
 }
 
 section {
+  width: min(100%, 1440px);
   padding: u.rem(46) u.rem(19);
+  margin: 0 auto;
 }

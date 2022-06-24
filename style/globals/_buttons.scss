@@ -1,10 +1,20 @@
 @use "../util" as u;
 @use "../globals/colors" as c;
 .btn {
+  position: relative;
   color: white;
   border: none;
   border-radius: 50px;
   background: linear-gradient(160deg, c.$secondary-clr 0%, c.$primary-clr 100%);
   padding: 16px 22px;
   box-shadow: 0px 9px 10px -5px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      160deg,
+      lighten(c.$secondary-clr, 5%) 0%,
+      lighten(c.$primary-clr, 5%) 100%
+    );
+  }
 }

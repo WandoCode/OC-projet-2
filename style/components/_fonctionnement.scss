@@ -44,7 +44,6 @@
     }
 
     &:hover {
-      // TODO:C'est static ce style ou c'est un hover???
       background-color: c.$primary-light-clr;
       & .etape__icone {
         color: c.$primary-clr;
