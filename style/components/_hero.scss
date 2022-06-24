@@ -2,8 +2,8 @@
 @use "../globals/colors" as c;
 
 .hero {
-  height: u.rem(287);
-  padding: u.rem(39) 0 u.rem(57) 0;
+  height: 287px;
+  padding: 39px 0 57px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,9 +14,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 110px;
+    gap: 10px 0;
     & h1 {
-      padding: 0 12%;
+      padding: 0 15% 0 12%;
+    }
+    & h2 {
+      padding: 0 9%;
+    }
+  }
+
+  @include u.breakpoint(medium) {
+    & .titles {
+      justify-content: space-evenly;
+
+      & h1 {
+        padding: 0 5%;
+      }
     }
   }
 }

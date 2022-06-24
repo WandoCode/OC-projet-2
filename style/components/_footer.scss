@@ -1,4 +1,3 @@
-@use "../util" as u;
 @use "../globals/colors" as c;
 
 .footer {
@@ -10,14 +9,14 @@
     align-items: flex-start;
   }
   &__logo {
-    height: u.rem(17);
+    height: 17px;
     filter: invert(100%);
   }
 
   &__menu {
     height: 100%;
-    margin-top: u.rem(22);
-    margin-bottom: u.rem(10);
+    margin-top: 22px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

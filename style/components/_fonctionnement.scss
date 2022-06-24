@@ -2,18 +2,17 @@
 @use "../globals/colors" as c;
 
 .fonctionnement {
-  height: u.rem(440);
+  height: 440px;
   & .etapes-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 23px 0;
-    margin: 0 auto;
   }
   & .etape {
-    width: 95.54%;
+    width: 94.54%;
     margin-left: 12px;
-    height: u.rem(75);
+    height: 75px;
     display: flex;
     align-items: center;
     position: relative;
@@ -50,6 +49,10 @@
       & .etape__icone {
         color: c.$primary-clr;
       }
+    }
+
+    @include u.breakpoint(medium) {
+      border: none;
     }
   }
 }

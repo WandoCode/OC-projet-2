@@ -3,12 +3,13 @@
 
 .restaurants {
   background-color: c.$background-light-clr;
-  padding-bottom: u.rem(64);
+  padding-bottom: 64px;
 
   &__container {
     display: flex;
-    flex-direction: column;
-    gap: u.rem(19) 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 19px;
   }
 
   & .card {
@@ -90,6 +91,15 @@
 
     &__text__left-container {
       flex-grow: 1;
+    }
+  }
+
+  @include u.breakpoint(medium) {
+    & {
+      & .card {
+        width: 45%;
+        flex-grow: 1;
+      }
     }
   }
 }
