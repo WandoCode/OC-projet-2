@@ -44,7 +44,7 @@
             Découvrez des restaurants d'exception, séléctionnés par nos soins.
           </h2>
         </div>
-        <!-- TODO: Besoin d'un anchor ici? Le bouton doit rediriger mais ca peut se faire via JS. Pas précisé ici. Dans le doute: styler le bouton comme si l'anchor n'existe pas, pour l'enlever si besoin -->
+        <!-- TODO: Enlever anchor (not valid in W3C) -->
         <a href="#restaurants"
           ><button class="btn">Explorer nos restaurants</button></a
         >
@@ -87,6 +87,7 @@
                 <p class="text-lg">Ménilmontant</p>
               </div>
               <div class="like-btn">
+                <!-- TODO: Sortir les labels de la carte (label ne peut pas etre un child de a => W3C) -->
                 <label for="like-one">
                   <input type="checkbox" name="like" id="like-one" />
                   <i class="check-inactive fa-regular fa-heart"></i>
@@ -163,7 +164,7 @@
       <div class="footer--container">
         <img
           class="footer__logo"
-          src="./images/logo/ohmyfood@2x.svg"
+          src="../images/logo/ohmyfood@2x.svg"
           alt="logo ohmyfood"
         />
         <ul class="footer__menu">
@@ -179,12 +180,14 @@
               Devenir partenaire
             </a>
           </li>
-          <a href="#">
-            <li class="footer__menu__item">Mentions légales</li>
-          </a>
-          <a href="#">
-            <li class="footer__menu__item">Contact</li>
-          </a>
+
+          <li class="footer__menu__item">
+            <a href="#">Mentions légales</a>
+          </li>
+
+          <li class="footer__menu__item">
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </div>
     </footer>
