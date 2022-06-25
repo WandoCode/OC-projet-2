@@ -32,4 +32,8 @@ footer {
   width: min(100%, 1440px);
   padding: u.rem(46) u.rem(19);
   margin: 0 auto;
+
+  &--plats {
+    padding: u.rem(46) u.rem(14);
+  }
 }

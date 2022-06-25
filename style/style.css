@@ -69,6 +69,7 @@ button {
 .h2--menu {
   text-transform: uppercase;
   font-size: 16px;
+  text-align: left;
 }
 
 .location__text {
@@ -141,6 +142,7 @@ button {
 .btn:hover {
   cursor: pointer;
   background: linear-gradient(160deg, #ff93e1 0%, #a06be1 100%);
+  box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.438);
 }
 @media (min-width: 56.25em) {
   .btn {
@@ -246,6 +248,26 @@ h2.section--mg-lg {
     transform: scale(0.1) translateY(-100%);
   }
 }
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .like-btn {
   width: 78px;
   display: flex;
@@ -320,6 +342,9 @@ footer .footer--container {
   padding: 2.875rem 1.1875rem;
   margin: 0 auto;
 }
+.section--plats {
+  padding: 2.875rem 0.875rem;
+}
 
 .screen-loader {
   position: fixed;
@@ -328,30 +353,41 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
 }
-.screen-loader .logo {
+.screen-loader .animation-wrapper {
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   margin: 0 auto;
-  top: 10%;
-  width: min(85%, 500px);
+  width: min(85%, 700px);
+}
+.screen-loader .logo {
+  margin-bottom: 20px;
+  width: 90%;
   -webkit-animation: jump-out 0.5s 2.5s;
           animation: jump-out 0.5s 2.5s;
 }
 .screen-loader .load-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 40%;
-  height: 10px;
+  height: 11px;
   border-radius: 5px;
   background: linear-gradient(160deg, #ff79da 0%, hsl(267deg, 66%, 60%) 100%);
   -webkit-animation: up-down 2s 3 ease-out;
           animation: up-down 2s 3 ease-out;
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
           animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
+}
+@media (min-width: 56.25em) {
+  .screen-loader .logo {
+    margin-bottom: 50px;
+  }
 }
 
 .restaurants {
@@ -658,10 +694,78 @@ footer .footer--container {
   border-top: 3px rgba(255, 255, 255, 0) solid;
 }
 .plats__container {
-  width: 100%;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 13px 0;
+  margin-top: 14px;
 }
 
 .plat {
+  height: 67px;
   display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 2s;
+  transform: translateY(40px);
+  opacity: 0;
+  -webkit-animation: slide-in 0.5s ease-out forwards;
+          animation: slide-in 0.5s ease-out forwards;
+}
+.plat__details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.plat__description {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: width 1s;
+}
+.plat__prix {
+  width: 10%;
+  text-align: right;
+}
+.plat__check-wrapper {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+.plat__check {
+  position: relative;
+  width: 60px;
+  top: -46px;
+  right: -12px;
+  background-color: hsl(165deg, 56%, 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 70px;
+  font-size: 25px;
+  transition: 1s;
+}
+.plat:hover .plat__description {
+  width: calc(90% - 60px);
+}
+.plat:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.plat:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.plat:nth-child(4) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+.plat:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }/*# sourceMappingURL=style.css.map */
