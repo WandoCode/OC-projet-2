@@ -17,6 +17,11 @@ button {
   @include u.breakpoint(large) {
     font-size: 30px;
   }
+
+  &--menu {
+    @include u.font("Shrikhand");
+    font-size: 28px;
+  }
 }
 
 .h2 {
@@ -26,6 +31,18 @@ button {
 
   @include u.breakpoint(large) {
     font-size: 21px;
+  }
+
+  &--section {
+    text-align: left;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: -0.3px;
+  }
+
+  &--menu {
+    text-transform: uppercase;
+    font-size: 16px;
   }
 }
 
@@ -47,11 +64,6 @@ button {
   @include u.breakpoint(large) {
     font-size: 20px;
   }
-}
-
-h2.section {
-  font-size: 25px;
-  letter-spacing: -0.3px;
 }
 
 .numerotation {

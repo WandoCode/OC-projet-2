@@ -45,6 +45,10 @@ button {
     font-size: 30px;
   }
 }
+.h1--menu {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+}
 
 .h2 {
   font-size: 18px;
@@ -55,6 +59,16 @@ button {
   .h2 {
     font-size: 21px;
   }
+}
+.h2--section {
+  text-align: left;
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: -0.3px;
+}
+.h2--menu {
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 .location__text {
@@ -75,11 +89,6 @@ button {
   .btn {
     font-size: 20px;
   }
-}
-
-h2.section {
-  font-size: 25px;
-  letter-spacing: -0.3px;
 }
 
 .numerotation {
@@ -237,6 +246,44 @@ h2.section--mg-lg {
     transform: scale(0.1) translateY(-100%);
   }
 }
+.like-btn {
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  padding-bottom: 10px;
+}
+.like-btn .check-active {
+  display: none;
+  color: hsl(267deg, 66%, 60%);
+}
+.like-btn .check-inactive {
+  transition: 0.3s;
+}
+.like-btn .check-inactive:hover {
+  transform: scale(1.2);
+}
+.like-btn .check-inactive:active {
+  font-size: 12px;
+  opacity: 50%;
+}
+.like-btn input[type=checkbox] {
+  height: 0;
+  width: 0;
+}
+.like-btn input:checked ~ .check-inactive {
+  display: none;
+}
+.like-btn input:checked ~ .check-active {
+  display: inline;
+  -webkit-animation: fadeIn 0.3s ease-in forwards;
+          animation: fadeIn 0.3s ease-in forwards;
+}
+.like-btn--big {
+  align-items: flex-end;
+  padding-left: 4%;
+}
+
 header {
   height: 63px;
   width: min(100%, 1440px);
@@ -268,7 +315,7 @@ footer .footer--container {
   margin: 0 auto;
 }
 
-section {
+.section {
   width: min(100%, 1440px);
   padding: 2.875rem 1.1875rem;
   margin: 0 auto;
@@ -281,8 +328,6 @@ section {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
 }
 .screen-loader .logo {
   position: absolute;
@@ -291,8 +336,8 @@ section {
   margin: 0 auto;
   top: 10%;
   width: min(85%, 500px);
-  -webkit-animation: slide-up-small 0.5s 2.5s;
-          animation: slide-up-small 0.5s 2.5s;
+  -webkit-animation: jump-out 0.5s 2.5s;
+          animation: jump-out 0.5s 2.5s;
 }
 .screen-loader .load-bar {
   position: absolute;
@@ -307,16 +352,6 @@ section {
           animation: up-down 2s 3 ease-out;
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
           animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
-}
-
-.logo {
-  height: 45%;
-  margin-top: 10px;
-}
-@media (min-width: 56.25em) {
-  .logo {
-    margin-left: 8%;
-  }
 }
 
 .restaurants {
@@ -369,39 +404,6 @@ section {
   height: 100%;
   padding-left: 13px;
   white-space: nowrap;
-}
-.restaurants .card__icone {
-  width: 78px;
-  display: flex;
-  justify-content: center;
-  font-size: 23px;
-  padding-bottom: 10px;
-}
-.restaurants .card__icone .check-active {
-  display: none;
-  color: hsl(267deg, 66%, 60%);
-}
-.restaurants .card__icone .check-inactive {
-  transition: 0.3s;
-}
-.restaurants .card__icone .check-inactive:hover {
-  transform: scale(1.2);
-}
-.restaurants .card__icone .check-inactive:active {
-  font-size: 12px;
-  opacity: 50%;
-}
-.restaurants .card__icone input[type=checkbox] {
-  height: 0;
-  width: 0;
-}
-.restaurants .card__icone input:checked ~ .check-inactive {
-  display: none;
-}
-.restaurants .card__icone input:checked ~ .check-active {
-  display: inline;
-  -webkit-animation: fadeIn 0.3s ease-in forwards;
-          animation: fadeIn 0.3s ease-in forwards;
 }
 .restaurants .card__text__left-container {
   flex-grow: 1;
@@ -493,9 +495,12 @@ section {
 }
 
 .fonctionnement {
+  display: flex;
+  flex-direction: column;
   height: 440px;
 }
 .fonctionnement .etapes-container {
+  margin-top: 29px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -584,4 +589,79 @@ section {
 .footer__menu__icon {
   width: 17px;
   font-size: 13px;
+}
+
+.header {
+  padding-top: 10px;
+}
+.header__logo {
+  height: 54%;
+}
+@media (min-width: 56.25em) {
+  .header__logo {
+    margin-left: 8%;
+  }
+}
+.header--back {
+  position: relative;
+}
+.header__arrow {
+  position: absolute;
+  display: flex !important;
+  top: 0;
+  left: 22px;
+  bottom: 0;
+  margin-top: 5px;
+  align-items: center;
+  color: hsl(0deg, 0%, 21%);
+  font-size: 21px;
+}
+
+.menu {
+  background-color: hsl(0deg, 0%, 96%);
+}
+.menu__start {
+  position: relative;
+  height: 275px;
+}
+.menu__picture {
+  height: 100%;
+  max-width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu__title {
+  position: absolute;
+  bottom: -6%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 31px 20px 0 20px;
+  border-radius: 40px 40px 0 0;
+  background-color: hsl(0deg, 0%, 96%);
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plats__title {
+  align-self: flex-start;
+  height: 28px;
+}
+.plats__title span {
+  height: 100%;
+  display: inline-block;
+  border-bottom: 3px hsl(165deg, 56%, 74%) solid;
+  border-top: 3px rgba(255, 255, 255, 0) solid;
+}
+.plats__container {
+  width: 100%;
+  background-color: red;
+}
+
+.plat {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

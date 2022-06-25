@@ -1,5 +1,5 @@
-@use "../util/" as u;
-@use "../globals/colors" as c;
+@use "../../util/" as u;
+@use "../../globals/colors" as c;
 
 .restaurants {
   background-color: c.$background-light-clr;
@@ -52,43 +52,6 @@
       height: 100%;
       padding-left: 13px;
       white-space: nowrap;
-    }
-
-    &__icone {
-      width: 78px;
-      display: flex;
-      justify-content: center;
-      font-size: 23px;
-      padding-bottom: 10px;
-
-      & .check-active {
-        display: none;
-        color: c.$primary-clr;
-      }
-      & .check-inactive {
-        transition: 0.3s;
-        &:hover {
-          transform: scale(1.2);
-        }
-        &:active {
-          font-size: 12px;
-          opacity: 50%;
-        }
-      }
-
-      & input[type="checkbox"] {
-        height: 0;
-        width: 0;
-      }
-
-      & input:checked ~ .check-inactive {
-        display: none;
-      }
-
-      & input:checked ~ .check-active {
-        display: inline;
-        animation: fadeIn 0.3s ease-in forwards;
-      }
     }
 
     &__text__left-container {

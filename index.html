@@ -20,9 +20,9 @@
       />
       <div class="load-bar"></div>
     </div>
-    <header>
+    <header class="header">
       <img
-        class="logo"
+        class="header__logo"
         src="./images/logo/ohmyfood@2x.svg"
         alt="logo ohmyfood"
       />
@@ -34,7 +34,7 @@
           <p class="location__text light">Paris, Belleville</p>
         </div>
       </aside>
-      <section class="hero">
+      <section class="hero section">
         <div class="titles">
           <h1 class="h1">Réservez le menu qui vous convient</h1>
           <h2 class="h2">
@@ -46,8 +46,8 @@
           ><button class="btn">Explorer nos restaurants</button></a
         >
       </section>
-      <section class="fonctionnement">
-        <h2 class="section">Fonctionnement</h2>
+      <section class="section fonctionnement">
+        <h2 class="h2 h2--section">Fonctionnement</h2>
         <div class="etapes-container">
           <div class="etape">
             <div class="etape__numerotation numerotation">1</div>
@@ -68,8 +68,8 @@
           </div>
         </div>
       </section>
-      <section class="restaurants" id="restaurants">
-        <h2 class="section section--mg-lg">Restaurants</h2>
+      <section class="section restaurants" id="restaurants">
+        <h2 class="h2 h2--section section--mg-lg">Restaurants</h2>
         <div class="restaurants__container">
           <a href="./pages/la-palette-du-gout" class="card">
             <img
@@ -83,7 +83,7 @@
                 <h3 class="h3 card__heading">La palette du goût</h3>
                 <p class="text-lg">Ménilmontant</p>
               </div>
-              <div class="card__icone">
+              <div class="like-btn">
                 <label for="like-one">
                   <input type="checkbox" name="like" id="like-one" />
                   <i class="check-inactive fa-regular fa-heart"></i>
@@ -104,7 +104,7 @@
                 <h3 class="h3 card__heading">La note enchantée</h3>
                 <p class="text-lg">Charonne</p>
               </div>
-              <div class="card__icone">
+              <div class="like-btn">
                 <label for="like-two">
                   <input type="checkbox" name="like" id="like-two" />
                   <i class="check-inactive fa-regular fa-heart"></i>
@@ -113,7 +113,7 @@
               </div>
             </div>
           </a>
-          <a href="./pages/a-la-francaise" class="card">
+          <a href="../pages/a-la-francaise.html" class="card">
             <img
               class="card__img"
               src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -124,7 +124,7 @@
                 <h3 class="h3 card__heading">À la française</h3>
                 <p class="text-lg">Cité Rouge</p>
               </div>
-              <div class="card__icone">
+              <div class="like-btn">
                 <label for="like-three">
                   <input type="checkbox" name="like" id="like-three" />
                   <i class="check-inactive fa-regular fa-heart"></i>
@@ -144,7 +144,7 @@
                 <h3 class="h3 card__heading">Le délice des sens</h3>
                 <p class="text-lg">Folie-Méricourt</p>
               </div>
-              <div class="card__icone">
+              <div class="like-btn">
                 <label for="like-four">
                   <input type="checkbox" name="like" id="like-four" />
                   <i class="check-inactive fa-regular fa-heart"></i>
@@ -165,15 +165,23 @@
         />
         <ul class="footer__menu">
           <li class="footer__menu__item">
-            <i class="footer__menu__icon fa-solid fa-utensils"></i>
-            Proposer un restaurant
+            <a href="#">
+              <i class="footer__menu__icon fa-solid fa-utensils"></i> Proposer
+              un restaurant
+            </a>
           </li>
           <li class="footer__menu__item">
-            <i class="footer__menu__icon fa-solid fa-handshake-angle"></i>
-            Devenir partenaire
+            <a href="#">
+              <i class="footer__menu__icon fa-solid fa-handshake-angle"></i>
+              Devenir partenaire
+            </a>
           </li>
-          <li class="footer__menu__item">Mentions légales</li>
-          <li class="footer__menu__item">Contact</li>
+          <a href="#">
+            <li class="footer__menu__item">Mentions légales</li>
+          </a>
+          <a href="#">
+            <li class="footer__menu__item">Contact</li>
+          </a>
         </ul>
       </div>
     </footer>

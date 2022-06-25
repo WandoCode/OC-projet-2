@@ -1,4 +1,4 @@
-@use "../globals/colors" as c;
+@use "../../globals/colors" as c;
 
 .screen-loader {
   position: fixed;
@@ -7,7 +7,7 @@
   background-color: c.$background-light-clr;
   z-index: 1;
   display: flex;
-  animation: loader 3s;
+  // animation: loader 3s;
 
   & .logo {
     position: absolute;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     top: 10%;
     width: min(85%, 500px);
-    animation: slide-up-small 0.5s 2.5s;
+    animation: jump-out 0.5s 2.5s;
   }
 
   & .load-bar {

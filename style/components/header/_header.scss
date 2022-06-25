@@ -1,0 +1,27 @@
+@use "../../util" as u;
+@use "../../globals/colors" as c;
+.header {
+  padding-top: 10px;
+  &__logo {
+    height: 54%;
+    @include u.breakpoint(large) {
+      margin-left: 8%;
+    }
+  }
+
+  &--back {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    display: flex !important; // TODO: Changer la propriété. Idée: mettre le logo et la flèche dans un div qui les centres, avec un padding-top pour qu'ils correspondent à l'image
+    top: 0;
+    left: 22px;
+    bottom: 0;
+    margin-top: 5px;
+    align-items: center;
+    color: c.$background-dark-clr;
+    font-size: 21px;
+  }
+}

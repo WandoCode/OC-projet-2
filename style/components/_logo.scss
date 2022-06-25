@@ -1,9 +1,0 @@
-@use "../util" as u;
-
-.logo {
-  height: 45%;
-  margin-top: 10px;
-  @include u.breakpoint(large) {
-    margin-left: 8%;
-  }
-}
