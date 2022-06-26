@@ -12,6 +12,8 @@
 
   &--commande {
     padding: 16px 50px;
+    margin: u.rem(62) auto;
+    display: flex;
   }
   &:hover {
     cursor: pointer;

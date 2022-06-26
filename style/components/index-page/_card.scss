@@ -1,7 +1,63 @@
+@use "../../globals/colors" as c;
+@use "../../util/" as u;
+
 .card {
-  margin: 0 auto;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 5px 9px 1px rgba(150, 148, 150, 0.3);
+
+  &__anchor {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   & img {
     max-width: 100%;
-    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    height: 175px;
+    min-height: 175px;
+    width: 100%;
+    &--center {
+      object-position: center 60%;
+    }
+  }
+  &__sticker {
+    margin: 4%;
+    padding: 1.9% 3.5%;
+    background-color: c.$tertiary-clr;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+    padding-left: 13px;
+    white-space: nowrap;
+  }
+
+  @include u.breakpoint(medium) {
+    & {
+      width: 45%;
+      flex-grow: 1;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    & {
+      width: 20%;
+    }
   }
 }

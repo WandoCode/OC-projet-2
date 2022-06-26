@@ -141,6 +141,8 @@ button {
 }
 .btn--commande {
   padding: 16px 50px;
+  margin: 3.875rem auto;
+  display: flex;
 }
 .btn:hover {
   cursor: pointer;
@@ -272,11 +274,11 @@ h2.section--mg-lg {
   }
 }
 .like-btn {
-  width: 78px;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  right: 0px;
+  bottom: 28px;
+  margin-right: 7.6%;
   font-size: 23px;
-  padding-bottom: 10px;
 }
 .like-btn .check-active {
   display: none;
@@ -348,11 +350,6 @@ footer .footer--container {
 .section--plats {
   padding: 2.875rem 0.875rem 0 0.875rem;
 }
-.section--commande {
-  display: flex;
-  justify-content: center;
-  padding: 3.875rem 1.1875rem;
-}
 
 .screen-loader {
   position: fixed;
@@ -361,8 +358,6 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
 }
 .screen-loader .animation-wrapper {
   position: absolute;
@@ -408,18 +403,23 @@ footer .footer--container {
   flex-wrap: wrap;
   gap: 19px;
 }
-.restaurants .card {
+
+.card {
   position: relative;
   height: 250px;
   width: 100%;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0px 5px 9px 1px rgba(150, 148, 150, 0.3);
 }
-.restaurants .card__img {
+.card__anchor {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
@@ -428,11 +428,11 @@ footer .footer--container {
   min-height: 175px;
   width: 100%;
 }
-.restaurants .card__img--center {
+.card img--center {
   -o-object-position: center 60%;
      object-position: center 60%;
 }
-.restaurants .card__sticker {
+.card__sticker {
   margin: 4%;
   padding: 1.9% 3.5%;
   background-color: hsl(165deg, 56%, 74%);
@@ -441,35 +441,26 @@ footer .footer--container {
   right: 0;
   border-radius: 2px;
 }
-.restaurants .card__text {
+.card__text {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   width: 100%;
-  height: 100%;
+  flex-grow: 1;
   padding-left: 13px;
   white-space: nowrap;
 }
-.restaurants .card__text__left-container {
-  flex-grow: 1;
-}
 @media (min-width: 43.75em) {
-  .restaurants .card {
+  .card {
     width: 45%;
     flex-grow: 1;
   }
 }
 @media (min-width: 56.25em) {
-  .restaurants .card {
+  .card {
     width: 20%;
   }
-}
-
-.card {
-  margin: 0 auto;
-}
-.card img {
-  max-width: 100%;
-  height: auto;
 }
 
 .location {
@@ -663,6 +654,8 @@ footer .footer--container {
 
 .menu {
   background-color: hsl(0deg, 0%, 96%);
+  display: flex;
+  flex-direction: column;
 }
 .menu__start {
   position: relative;
@@ -694,6 +687,7 @@ footer .footer--container {
 .plats__title {
   align-self: flex-start;
   height: 28px;
+  margin-left: 6px;
 }
 .plats__title span {
   height: 100%;
@@ -748,7 +742,7 @@ footer .footer--container {
   position: relative;
   width: 60px;
   top: -46px;
-  right: -12px;
+  right: -13px;
   background-color: hsl(165deg, 56%, 74%);
   display: flex;
   justify-content: center;
