@@ -7,11 +7,11 @@
   border: none;
   border-radius: 50px;
   background: linear-gradient(160deg, c.$secondary-clr 0%, c.$primary-clr 100%);
-  padding: 16px 22px;
+  padding: u.rem(16) u.rem(22);
   box-shadow: 0px 9px 10px -5px rgba(0, 0, 0, 0.3);
 
   &--commande {
-    padding: 16px 50px;
+    padding: u.rem(16) u.rem(50);
     margin: u.rem(62) auto;
     display: flex;
   }
@@ -26,10 +26,10 @@
   }
 
   @include u.breakpoint(large) {
-    padding: 24px 30px;
+    padding: u.rem(24) u.rem(30);
 
     &--commande {
-      padding: 24px 70px;
+      padding: u.rem(24) u.rem(70);
     }
   }
 }

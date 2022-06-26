@@ -7,42 +7,42 @@
 body,
 button {
   @include u.font("Roboto");
-  font-size: 15px;
+  font-size: u.rem(15);
 }
 
 .h1 {
   font-weight: 900;
-  font-size: 24px;
+  font-size: u.rem(24);
   text-align: center;
   @include u.breakpoint(large) {
-    font-size: 30px;
+    font-size: u.rem(30);
   }
 
   &--menu {
     @include u.font("Shrikhand");
-    font-size: 28px;
+    font-size: u.rem(28);
   }
 }
 
 .h2 {
-  font-size: 18px;
+  font-size: u.rem(18);
   font-weight: 300;
   text-align: center;
 
   @include u.breakpoint(large) {
-    font-size: 21px;
+    font-size: u.rem(21);
   }
 
   &--section {
     text-align: left;
     font-weight: 500;
-    font-size: 25px;
-    letter-spacing: -0.3px;
+    font-size: u.rem(25);
+    letter-spacing: u.rem(-0.3);
   }
 
   &--menu {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: u.rem(16);
     text-align: left;
   }
 }
@@ -50,54 +50,54 @@ button {
 .location {
   &__text {
     @include u.font("Roboto");
-    font-size: 16px;
+    font-size: u.rem(16);
     font-weight: 700;
   }
   &__icon {
-    font-size: 17px;
+    font-size: u.rem(17);
   }
 }
 
 .btn {
-  font-size: 16px;
+  font-size: u.rem(16);
   font-weight: 400;
-  letter-spacing: 0.2px;
+  letter-spacing: u.rem(0.2);
   @include u.breakpoint(large) {
-    font-size: 20px;
+    font-size: u.rem(20);
   }
 }
 
 .numerotation {
-  font-size: 13px;
+  font-size: u.rem(13);
   @include u.breakpoint(large) {
-    font-size: 15px;
+    font-size: u.rem(15);
   }
 }
 
 .instruction {
   font-weight: 800;
-  font-size: 16px;
+  font-size: u.rem(16);
   @include u.breakpoint(large) {
-    font-size: 18px;
+    font-size: u.rem(18);
   }
 }
 
 .sticker {
   color: c.$tertiary-dark-clr;
-  font-size: 14px;
+  font-size: u.rem(14);
   font-weight: 600;
 }
 
 .h3 {
-  font-size: 18px;
+  font-size: u.rem(18);
 }
 
 .text-lg {
-  font-size: 17px;
+  font-size: u.rem(17);
 }
 
 .footer {
   color: white;
-  letter-spacing: 0.5px;
+  letter-spacing: u.rem(0.5);
 }
 // Faire attention de donner un classe specifique pour modifier la typo, ne pas prendre la meme que dans le 'component'

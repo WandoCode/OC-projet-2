@@ -1,8 +1,9 @@
+@use "../util/" as u;
 h2.section {
-  margin-bottom: 30px;
+  margin-bottom: u.rem(30);
 
   &--mg-lg {
-    margin: 6px 0 22px;
+    margin: u.rem(6) 0 u.rem(22);
   }
 }
 

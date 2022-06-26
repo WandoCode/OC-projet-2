@@ -1,13 +1,13 @@
 @use "../../globals/colors" as c;
-
+@use "../../util" as u;
 .restaurants {
   background-color: c.$background-light-clr;
-  padding-bottom: 64px;
+  padding-bottom: u.rem(64);
 
   &__container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 19px;
+    gap: u.rem(19);
   }
 }

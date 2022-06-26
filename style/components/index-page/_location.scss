@@ -2,7 +2,7 @@
 @use "../../globals/colors" as c;
 
 .location {
-  height: 50px;
+  height: u.rem(50);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +21,9 @@
   }
   @include u.breakpoint(large) {
     position: absolute;
-    top: -63px;
+    top: u.rem(-63);
     right: 0;
-    height: 63px;
-    width: 250px;
+    height: u.rem(63);
+    width: u.rem(250);
   }
 }

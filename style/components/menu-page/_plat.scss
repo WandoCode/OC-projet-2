@@ -1,14 +1,15 @@
 @use "../../globals/colors" as c;
+@use "../../util/" as u;
 .plat {
-  height: 67px;
+  height: u.rem(67);
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 12px;
+  padding: u.rem(12);
   border-radius: 12px;
   overflow: hidden;
   transition: 2s;
-  transform: translateY(40px);
+  transform: translateY(u.rem(40));
   opacity: 0;
   animation: slide-in 0.5s ease-out forwards;
 
@@ -30,7 +31,7 @@
   &__prix {
     width: 10%;
     text-align: right;
-    padding-right: 7px;
+    padding-right: u.rem(7);
   }
 
   &__check-wrapper {
@@ -40,21 +41,21 @@
   }
   &__check {
     position: relative;
-    width: 60px;
-    top: -46px;
-    right: -13px;
+    width: u.rem(60);
+    top: u.rem(-46);
+    right: u.rem(-13);
     background-color: c.$tertiary-clr;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    height: 70px;
-    font-size: 20px;
+    height: u.rem(70);
+    font-size: u.rem(20);
     transition: 1s;
   }
 
   &:hover &__description {
-    width: calc(90% - 60px);
+    width: calc(90% - u.rem(60));
   }
 
   &:nth-child(2) {
@@ -70,4 +71,3 @@
     animation-delay: calc(4 * 0.25s);
   }
 }
-// TODO: OKay si le 1er de chaque sous-menu apparait en meme temps?

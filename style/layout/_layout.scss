@@ -1,6 +1,6 @@
 @use "../util" as u;
 header {
-  height: 63px;
+  height: u.rem(63);
   width: min(100%, 1440px);
   display: flex;
   justify-content: center;
@@ -19,11 +19,11 @@ main {
 }
 
 footer {
-  height: 200px;
+  height: u.rem(200);
   & .footer--container {
     width: min(100%, 1440px);
     height: 100%;
-    padding: 27px;
+    padding: u.rem(27);
     margin: 0 auto;
   }
 }

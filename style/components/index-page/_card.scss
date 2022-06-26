@@ -3,7 +3,7 @@
 
 .card {
   position: relative;
-  height: 250px;
+  height: u.rem(250);
   width: 100%;
   background-color: white;
   border-radius: 15px;
@@ -20,8 +20,8 @@
     max-width: 100%;
     object-fit: cover;
     object-position: bottom;
-    height: 175px;
-    min-height: 175px;
+    height: u.rem(175);
+    min-height: u.rem(175);
     width: 100%;
     &--center {
       object-position: center 60%;
@@ -44,7 +44,7 @@
     justify-content: center;
     width: 100%;
     flex-grow: 1;
-    padding-left: 13px;
+    padding-left: u.rem(13);
     white-space: nowrap;
   }
 

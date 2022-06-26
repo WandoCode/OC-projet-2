@@ -1,10 +1,11 @@
 @use "../globals/colors" as c;
+@use "../util/" as u;
 .like-btn {
   position: absolute;
-  right: 0px;
-  bottom: 28px;
+  right: 0;
+  bottom: u.rem(28);
   margin-right: 7.6%;
-  font-size: 23px;
+  font-size: u.rem(23);
 
   & .check-active {
     display: none;

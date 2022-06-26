@@ -7,7 +7,7 @@
 
   &__start {
     position: relative;
-    height: 275px;
+    height: u.rem(275);
   }
 
   &__picture {
@@ -23,14 +23,14 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 31px 20px 0 20px;
-    border-radius: 40px 40px 0 0;
+    padding: u.rem(31) u.rem(20) 0 u.rem(20);
+    border-radius: u.rem(40) u.rem(40) 0 0;
     background-color: c.$background-light-clr;
   }
 
   @include u.breakpoint(medium) {
     &__title {
-      padding: 31px calc(20px + 10%) 0 calc(20px + 10%);
+      padding: u.rem(31) calc(u.rem(20) + 10%) 0 calc(u.rem(20) + 10%);
     }
     &__plats {
       width: 80%;
@@ -44,9 +44,9 @@
       flex-basis: 100%;
     }
     &__title {
-      padding: 31px 20px 0 20px;
+      padding: u.rem(31) u.rem(20) 0 u.rem(20);
       justify-content: flex-start;
-      gap: 20px;
+      gap: u.rem(20);
     }
     &__btn {
       flex-basis: 100%;

@@ -1,22 +1,23 @@
 @use "../../globals/colors" as c;
+@use "../../util/" as u;
 .plats {
   &__title {
     align-self: flex-start;
-    height: 28px;
+    height: u.rem(28);
     margin-left: 6px;
 
     & span {
       height: 100%;
       display: inline-block;
-      border-bottom: 3px c.$tertiary-clr solid;
-      border-top: 3px rgba(255, 255, 255, 0) solid;
+      border-bottom: u.rem(3) c.$tertiary-clr solid;
+      border-top: u.rem(3) rgba(255, 255, 255, 0) solid;
     }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 15px 0;
-    margin-top: 14px;
+    gap: u.rem(15) 0;
+    margin-top: u.rem(14);
   }
 }
