@@ -9,14 +9,24 @@
   & .check-active {
     display: none;
     color: c.$primary-clr;
-  }
-  & .check-inactive {
-    transition: 0.3s;
+    transition: 0.2s;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
     &:active {
-      font-size: 12px;
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  & .check-inactive {
+    animation: fadeIn 0.8s ease-in;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1.2);
       opacity: 50%;
     }
   }
@@ -31,12 +41,15 @@
   }
 
   & input:checked ~ .check-active {
-    display: inline;
-    animation: fadeIn 0.3s ease-in forwards;
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in;
   }
 
   &--big {
-    align-items: flex-end;
-    padding-left: 4%;
+    position: static;
+    margin-right: 5.5%;
+    align-self: center;
   }
 }
+
+// TODO: Nettoyer les propriétés qui polluent

@@ -169,22 +169,18 @@ h2.section--mg-lg {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0%;
-    font-size: 10px;
   }
   100% {
     opacity: 100%;
-    font-size: 23px;
   }
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0%;
-    font-size: 10px;
   }
   100% {
     opacity: 100%;
-    font-size: 23px;
   }
 }
 @-webkit-keyframes loader {
@@ -283,15 +279,25 @@ h2.section--mg-lg {
 .like-btn .check-active {
   display: none;
   color: hsl(267deg, 66%, 60%);
+  transition: 0.2s;
+}
+.like-btn .check-active:hover {
+  transform: scale(1.1);
+}
+.like-btn .check-active:active {
+  transform: scale(1.2);
+  opacity: 0;
 }
 .like-btn .check-inactive {
-  transition: 0.3s;
+  -webkit-animation: fadeIn 0.8s ease-in;
+          animation: fadeIn 0.8s ease-in;
+  transition: 0.2s;
 }
 .like-btn .check-inactive:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .like-btn .check-inactive:active {
-  font-size: 12px;
+  transform: scale(1.2);
   opacity: 50%;
 }
 .like-btn input[type=checkbox] {
@@ -302,13 +308,14 @@ h2.section--mg-lg {
   display: none;
 }
 .like-btn input:checked ~ .check-active {
-  display: inline;
-  -webkit-animation: fadeIn 0.3s ease-in forwards;
-          animation: fadeIn 0.3s ease-in forwards;
+  display: inline-block;
+  -webkit-animation: fadeIn 0.8s ease-in;
+          animation: fadeIn 0.8s ease-in;
 }
 .like-btn--big {
-  align-items: flex-end;
-  padding-left: 4%;
+  position: static;
+  margin-right: 5.5%;
+  align-self: center;
 }
 
 header {
