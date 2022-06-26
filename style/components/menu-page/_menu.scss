@@ -1,9 +1,10 @@
 @use "../../globals/colors" as c;
-
+@use "../../util/" as u;
 .menu {
   background-color: c.$background-light-clr;
   display: flex;
   flex-direction: column;
+
   &__start {
     position: relative;
     height: 275px;
@@ -11,7 +12,7 @@
 
   &__picture {
     height: 100%;
-    max-width: 100vw;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -25,5 +26,34 @@
     padding: 31px 20px 0 20px;
     border-radius: 40px 40px 0 0;
     background-color: c.$background-light-clr;
+  }
+
+  @include u.breakpoint(medium) {
+    &__title {
+      padding: 31px calc(20px + 10%) 0 calc(20px + 10%);
+    }
+    &__plats {
+      width: 80%;
+    }
+  }
+  @include u.breakpoint(large) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__start {
+      flex-basis: 100%;
+    }
+    &__title {
+      padding: 31px 20px 0 20px;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    &__btn {
+      flex-basis: 100%;
+    }
+    &__plats {
+      flex-basis: 28%;
+      flex-grow: 1;
+    }
   }
 }

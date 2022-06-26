@@ -27,7 +27,9 @@
 
   @include u.breakpoint(large) {
     padding: 24px 30px;
+
+    &--commande {
+      padding: 24px 70px;
+    }
   }
 }
-
-// TODO: L'ombre doit changer au survol?
