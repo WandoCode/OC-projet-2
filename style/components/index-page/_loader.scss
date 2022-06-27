@@ -8,8 +8,7 @@
   background-color: c.$background-light-clr;
   z-index: 1;
   display: flex;
-  // animation: loader 3s;
-
+  animation: loader 3s;
   .animation-wrapper {
     position: absolute;
     left: 0;
@@ -21,7 +20,7 @@
     align-items: center;
     height: 100%;
     margin: 0 auto;
-    width: min(85%, 700px);
+    width: min(85%, 450px);
   }
 
   & .logo {

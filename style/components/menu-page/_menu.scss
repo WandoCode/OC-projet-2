@@ -4,6 +4,7 @@
   background-color: c.$background-light-clr;
   display: flex;
   flex-direction: column;
+  gap: u.rem(14);
 
   &__start {
     position: relative;
@@ -52,7 +53,7 @@
       flex-basis: 100%;
     }
     &__plats {
-      flex-basis: 28%;
+      width: 29%;
       flex-grow: 1;
     }
   }

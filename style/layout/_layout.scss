@@ -35,5 +35,18 @@ footer {
 
   &--plats {
     padding: u.rem(46) u.rem(14) 0 u.rem(14);
+
+    @include u.breakpoint(large) {
+      &:nth-child(2) {
+        padding-right: 0;
+      }
+      &:nth-child(3) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      &:nth-child(4) {
+        padding-left: 0;
+      }
+    }
   }
 }

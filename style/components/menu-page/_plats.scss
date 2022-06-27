@@ -4,7 +4,7 @@
   &__title {
     align-self: flex-start;
     height: u.rem(28);
-    margin-left: 6px;
+    margin-left: u.rem(6);
 
     & span {
       height: 100%;
@@ -17,7 +17,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: u.rem(15) 0;
+    gap: u.rem(15);
     margin-top: u.rem(14);
   }
 }

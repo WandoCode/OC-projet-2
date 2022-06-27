@@ -4,7 +4,7 @@
 // 700px, 900px, 1440px. Mobile is default style.
 $breakpoints-up: (
   "medium": u.em(700),
-  "large": u.em(900),
+  "large": u.em(930),
   "xlarge": u.em(1440),
 );
 
@@ -14,18 +14,4 @@ $breakpoints-up: (
   }
 }
 
-// 699.98px, 899.98px, 1439.98px. Xlarge screen is default style.
-$breakpoints-down: (
-  "small": u.em(699.98),
-  "medium": u.em(899.98),
-  "large": u.em(1439.98),
-);
-
-@mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
-    @content;
-  }
-}
-
-// TODO: nettoyer les fct et mixin inutiles
 // TODO: Dans tout le CSS=> Essayer de remplacer le maximum de px par des %

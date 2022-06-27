@@ -32,7 +32,7 @@ button {
   font-size: 1.5rem;
   text-align: center;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .h1 {
     font-size: 1.875rem;
   }
@@ -47,7 +47,7 @@ button {
   font-weight: 300;
   text-align: center;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .h2 {
     font-size: 1.3125rem;
   }
@@ -69,7 +69,7 @@ button {
   font-size: 1rem;
   font-weight: 700;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .p--instruction {
     font-size: 1.125rem;
   }
@@ -84,7 +84,7 @@ button {
   font-weight: 400;
   letter-spacing: 0.0125rem;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .btn {
     font-size: 1.25rem;
   }
@@ -93,13 +93,13 @@ button {
 .numerotation {
   font-size: 0.8125rem;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .numerotation {
     font-size: 0.9375rem;
   }
 }
 
-.sticker {
+.h4 {
   color: hsl(165deg, 100%, 26%);
   font-size: 0.875rem;
   font-weight: 600;
@@ -107,6 +107,7 @@ button {
 
 .h3 {
   font-size: 1.125rem;
+  white-space: nowrap;
 }
 
 .footer {
@@ -133,7 +134,7 @@ button {
   background: linear-gradient(160deg, #ff93e1 0%, #a06be1 100%);
   box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.438);
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .btn {
     padding: 1.5rem 1.875rem;
   }
@@ -253,7 +254,7 @@ header {
   align-items: center;
   margin: 0 auto;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   header {
     justify-content: flex-start;
   }
@@ -284,6 +285,18 @@ footer .footer--container {
 .section--plats {
   padding: 2.875rem 0.875rem 0 0.875rem;
 }
+@media (min-width: 58.125em) {
+  .section--plats:nth-child(2) {
+    padding-right: 0;
+  }
+  .section--plats:nth-child(3) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .section--plats:nth-child(4) {
+    padding-left: 0;
+  }
+}
 
 .header {
   padding-top: 0.625rem;
@@ -291,7 +304,7 @@ footer .footer--container {
 .header__logo {
   height: 54%;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .header__logo {
     margin-left: 8%;
   }
@@ -393,6 +406,8 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
 }
 .screen-loader .animation-wrapper {
   position: absolute;
@@ -405,7 +420,7 @@ footer .footer--container {
   align-items: center;
   height: 100%;
   margin: 0 auto;
-  width: min(85%, 700px);
+  width: min(85%, 450px);
 }
 .screen-loader .logo {
   margin-bottom: 1.25rem;
@@ -422,7 +437,7 @@ footer .footer--container {
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
           animation-timing-function: cubic-bezier(0.78, 0.13, 0.32, 0.89);
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .screen-loader .logo {
     margin-bottom: 3.125rem;
   }
@@ -499,7 +514,7 @@ footer .footer--container {
     flex-grow: 1;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .card {
     width: 20%;
   }
@@ -524,7 +539,7 @@ footer .footer--container {
   bottom: 10%;
   font-size: 1.0625rem;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .location {
     position: absolute;
     top: -3.9375rem;
@@ -563,7 +578,7 @@ footer .footer--container {
     padding: 0 5%;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .hero {
     flex-direction: row;
     justify-content: space-evenly;
@@ -623,7 +638,7 @@ footer .footer--container {
 .fonctionnement .etape:hover .etape__icone {
   color: hsl(267deg, 66%, 60%);
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .fonctionnement {
     height: 21.875rem;
   }
@@ -648,6 +663,7 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   display: flex;
   flex-direction: column;
+  gap: 0.875rem;
 }
 .menu__start {
   position: relative;
@@ -678,7 +694,7 @@ footer .footer--container {
     width: 80%;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 58.125em) {
   .menu {
     flex-direction: row;
     flex-wrap: wrap;
@@ -695,7 +711,7 @@ footer .footer--container {
     flex-basis: 100%;
   }
   .menu__plats {
-    flex-basis: 28%;
+    width: 29%;
     flex-grow: 1;
   }
 }
@@ -703,7 +719,7 @@ footer .footer--container {
 .plats__title {
   align-self: flex-start;
   height: 1.75rem;
-  margin-left: 6px;
+  margin-left: 0.375rem;
 }
 .plats__title span {
   height: 100%;
@@ -714,7 +730,7 @@ footer .footer--container {
 .plats__container {
   display: flex;
   flex-direction: column;
-  gap: 0.9375rem 0;
+  gap: 0.9375rem;
   margin-top: 0.875rem;
 }
 

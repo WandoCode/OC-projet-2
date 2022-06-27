@@ -78,7 +78,7 @@ button {
   }
 }
 
-.sticker {
+.h4 {
   color: c.$tertiary-dark-clr;
   font-size: u.rem(14);
   font-weight: 600;
@@ -86,9 +86,7 @@ button {
 
 .h3 {
   font-size: u.rem(18);
-}
-
-.text-lg {
+  white-space: nowrap;
 }
 
 .footer {

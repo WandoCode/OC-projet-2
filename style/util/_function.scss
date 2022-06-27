@@ -15,12 +15,3 @@
     @error "The variable for this function cannot use units; only numbers";
   }
 }
-
-@function remvw($pixel, $vw) {
-  @if math.is-unitless($pixel) and math.is-unitless($vw) {
-    $vw-unit: ($vw + vw);
-    @return calc(rem($pixel) + $vw-unit);
-  } @else {
-    @error "The variable for this function cannot use units; only numbers";
-  }
-}
