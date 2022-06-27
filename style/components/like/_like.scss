@@ -1,14 +1,16 @@
-@use "../globals/colors" as c;
-@use "../util/" as u;
-.like-btn {
+@use "../../globals/colors" as c;
+@use "../../util/" as u;
+
+.like {
   position: absolute;
   right: 0;
   bottom: u.rem(28);
   margin-right: 7.6%;
   font-size: u.rem(23);
 
-  & .check-active {
+  &__active.fa-heart {
     display: none;
+
     color: c.$primary-clr;
     transition: 0.2s;
     &:hover {
@@ -19,7 +21,7 @@
       opacity: 0;
     }
   }
-  & .check-inactive {
+  &__inactive {
     animation: fadeIn 0.8s ease-in;
     transition: 0.2s;
 
@@ -37,11 +39,11 @@
     width: 0;
   }
 
-  & input:checked ~ .check-inactive {
+  & input:checked ~ &__inactive {
     display: none;
   }
 
-  & input:checked ~ .check-active {
+  & input:checked ~ &__active {
     display: inline-block;
     animation: fadeIn 0.8s ease-in;
   }

@@ -47,13 +47,17 @@ button {
   }
 }
 
-.location {
-  &__text {
-    @include u.font("Roboto");
-    font-size: u.rem(16);
-    font-weight: 700;
+.p {
+  @include u.font("Roboto");
+  font-size: u.rem(16);
+  font-weight: 700;
+  &--instruction {
+    @include u.breakpoint(large) {
+      font-size: u.rem(18);
+    }
   }
-  &__icon {
+  &--restaurant {
+    font-weight: 400;
     font-size: u.rem(17);
   }
 }
@@ -74,14 +78,6 @@ button {
   }
 }
 
-.instruction {
-  font-weight: 800;
-  font-size: u.rem(16);
-  @include u.breakpoint(large) {
-    font-size: u.rem(18);
-  }
-}
-
 .sticker {
   color: c.$tertiary-dark-clr;
   font-size: u.rem(14);
@@ -93,11 +89,9 @@ button {
 }
 
 .text-lg {
-  font-size: u.rem(17);
 }
 
 .footer {
   color: white;
   letter-spacing: u.rem(0.5);
 }
-// Faire attention de donner un classe specifique pour modifier la typo, ne pas prendre la meme que dans le 'component'

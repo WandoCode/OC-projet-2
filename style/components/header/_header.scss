@@ -15,7 +15,7 @@
 
   &__arrow {
     position: absolute;
-    display: flex !important; // TODO: Changer la propriété. Idée: mettre le logo et la flèche dans un div qui les centres, avec un padding-top pour qu'ils correspondent à l'image
+    display: flex;
     top: 0;
     left: u.rem(22);
     bottom: 0;

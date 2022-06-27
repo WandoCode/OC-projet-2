@@ -1,3 +1,3 @@
-@use "menu";
-@use "plats";
-@use "plat";
+@forward "menu";
+@forward "plats";
+@forward "plat";

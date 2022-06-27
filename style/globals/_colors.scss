@@ -8,13 +8,3 @@ $background-clr: hsl(0, 0%, 92%);
 $background-light-clr: hsl(0, 0%, 96%);
 $background-dark-clr: hsl(0, 0%, 21%);
 $text-clr: hsl(0, 0%, 0%);
-
-// class modifiers
-
-.light {
-  color: lighten($text-clr, 20%);
-}
-
-.primary-light {
-  background-color: hsl(267, 100%, 96%);
-}

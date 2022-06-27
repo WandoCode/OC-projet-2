@@ -10,7 +10,7 @@
   align-items: center;
   background-color: c.$background-light-clr;
 
-  & .titles {
+  &__titles {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,7 @@
   }
 
   @include u.breakpoint(medium) {
-    & .titles {
+    &__titles {
       justify-content: space-evenly;
 
       & h1 {
@@ -37,7 +37,7 @@
       flex-direction: row;
       justify-content: space-evenly;
 
-      .titles {
+      &__titles {
         height: 70%;
       }
     }

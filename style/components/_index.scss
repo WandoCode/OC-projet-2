@@ -1,3 +1,5 @@
-@use "index-page";
 @use "header";
+@use "footer";
+@forward "like";
+@use "index-page";
 @use "menu-page";

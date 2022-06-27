@@ -12,12 +12,14 @@
   &__container {
     display: flex;
     position: relative;
+    color: lighten(c.$text-clr, 20%);
   }
 
   &__icon {
     position: absolute;
     left: -28%;
     bottom: 10%;
+    font-size: u.rem(17);
   }
   @include u.breakpoint(large) {
     position: absolute;

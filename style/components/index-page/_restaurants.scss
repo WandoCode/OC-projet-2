@@ -4,6 +4,10 @@
   background-color: c.$background-light-clr;
   padding-bottom: u.rem(64);
 
+  &__title {
+    margin-bottom: u.rem(30);
+    margin: u.rem(6) 0 u.rem(22);
+  }
   &__container {
     display: flex;
     flex-direction: row;

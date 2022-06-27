@@ -13,6 +13,9 @@
   opacity: 0;
   animation: slide-in 0.5s ease-out forwards;
 
+  &__title {
+    margin-bottom: 3px;
+  }
   &__details {
     position: relative;
     display: flex;
