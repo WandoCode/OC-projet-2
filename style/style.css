@@ -362,21 +362,13 @@ footer .footer--container {
   margin-right: 7.6%;
   font-size: 1.4375rem;
 }
-.like__active.fa-heart {
-  display: none;
-  color: hsl(267deg, 66%, 60%);
-  transition: 0.2s;
-}
-.like__active.fa-heart:hover {
-  transform: scale(1.1);
-}
-.like__active.fa-heart:active {
-  transform: scale(1.2);
-  opacity: 0;
+.like input[type=checkbox] {
+  height: 0;
+  width: 0;
 }
 .like__inactive {
-  -webkit-animation: fadeIn 0.8s ease-in;
-          animation: fadeIn 0.8s ease-in;
+  -webkit-animation: fadeIn 0.9s ease-out;
+          animation: fadeIn 0.9s ease-out;
   transition: 0.2s;
 }
 .like__inactive:hover {
@@ -386,17 +378,26 @@ footer .footer--container {
   transform: scale(1.2);
   opacity: 50%;
 }
-.like input[type=checkbox] {
-  height: 0;
-  width: 0;
+.like__active.fa-heart {
+  display: none;
 }
 .like input:checked ~ .like__inactive {
   display: none;
 }
-.like input:checked ~ .like__active {
+.like input:checked ~ .like__active.fa-heart {
   display: inline-block;
-  -webkit-animation: fadeIn 0.8s ease-in;
-          animation: fadeIn 0.8s ease-in;
+  color: hsl(267deg, 66%, 60%);
+  opacity: 100%;
+  -webkit-animation: fadeIn 0.9s ease-out;
+          animation: fadeIn 0.9s ease-out;
+  transition: 0.2s;
+}
+.like input:checked ~ .like__active.fa-heart:hover {
+  transform: scale(1.1);
+}
+.like input:checked ~ .like__active.fa-heart:active {
+  transform: scale(1.2);
+  opacity: 50%;
 }
 .like--big {
   position: static;
@@ -411,8 +412,6 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
 }
 .screen-loader .animation-wrapper {
   position: absolute;

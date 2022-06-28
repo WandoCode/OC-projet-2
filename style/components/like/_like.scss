@@ -8,21 +8,13 @@
   margin-right: 7.6%;
   font-size: u.rem(23);
 
-  &__active.fa-heart {
-    display: none;
-
-    color: c.$primary-clr;
-    transition: 0.2s;
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:active {
-      transform: scale(1.2);
-      opacity: 0;
-    }
+  & input[type="checkbox"] {
+    height: 0;
+    width: 0;
   }
+
   &__inactive {
-    animation: fadeIn 0.8s ease-in;
+    animation: fadeIn 0.9s ease-out;
     transition: 0.2s;
 
     &:hover {
@@ -34,18 +26,28 @@
     }
   }
 
-  & input[type="checkbox"] {
-    height: 0;
-    width: 0;
+  &__active.fa-heart {
+    display: none;
   }
 
   & input:checked ~ &__inactive {
     display: none;
   }
 
-  & input:checked ~ &__active {
+  & input:checked ~ &__active.fa-heart {
     display: inline-block;
-    animation: fadeIn 0.8s ease-in;
+    color: c.$primary-clr;
+    opacity: 100%;
+    animation: fadeIn 0.9s ease-out;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1.2);
+      opacity: 50%;
+    }
   }
 
   &--big {
