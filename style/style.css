@@ -65,8 +65,10 @@ button {
 }
 
 .p {
-  font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  font-weight: 400;
+}
+.p--instruction {
   font-weight: 700;
 }
 @media (min-width: 58.125em) {
@@ -75,8 +77,11 @@ button {
   }
 }
 .p--restaurant {
-  font-weight: 400;
   font-size: 1.0625rem;
+}
+.p--plat {
+  white-space: nowrap;
+  font-size: 0.9375rem;
 }
 
 .btn {
@@ -748,8 +753,14 @@ footer .footer--container {
   -webkit-animation: slide-in 0.5s ease-out forwards;
           animation: slide-in 0.5s ease-out forwards;
 }
+.plat__ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: width 1s;
+}
 .plat__title {
   margin-bottom: 3px;
+  width: 100%;
 }
 .plat__details {
   position: relative;
@@ -759,10 +770,6 @@ footer .footer--container {
 }
 .plat__description {
   width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: width 1s;
 }
 .plat__prix {
   width: 10%;
@@ -786,10 +793,12 @@ footer .footer--container {
   color: white;
   height: 4.375rem;
   font-size: 1.25rem;
-  transition: 1s;
 }
 .plat:hover .plat__description {
   width: calc(90% - 3.75rem);
+}
+.plat:hover .plat__title {
+  width: calc(100% - 3.75rem);
 }
 .plat:nth-child(2) {
   -webkit-animation-delay: 0.25s;

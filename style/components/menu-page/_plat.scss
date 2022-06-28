@@ -1,5 +1,6 @@
 @use "../../globals/colors" as c;
 @use "../../util/" as u;
+
 .plat {
   height: u.rem(67);
   display: flex;
@@ -13,9 +14,17 @@
   opacity: 0;
   animation: slide-in 0.5s ease-out forwards;
 
+  &__ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: width 1s;
+  }
+
   &__title {
     margin-bottom: 3px;
+    width: 100%;
   }
+
   &__details {
     position: relative;
     display: flex;
@@ -25,10 +34,6 @@
 
   &__description {
     width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: width 1s;
   }
 
   &__prix {
@@ -42,6 +47,7 @@
     height: 0;
     width: 0;
   }
+
   &__check {
     position: relative;
     width: u.rem(60);
@@ -54,11 +60,14 @@
     color: white;
     height: u.rem(70);
     font-size: u.rem(20);
-    transition: 1s;
   }
 
   &:hover &__description {
     width: calc(90% - u.rem(60));
+  }
+
+  &:hover &__title {
+    width: calc(100% - u.rem(60));
   }
 
   &:nth-child(2) {

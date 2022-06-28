@@ -48,17 +48,20 @@ button {
 }
 
 .p {
-  @include u.font("Roboto");
   font-size: u.rem(16);
-  font-weight: 700;
+  font-weight: 400;
   &--instruction {
+    font-weight: 700;
     @include u.breakpoint(large) {
       font-size: u.rem(18);
     }
   }
   &--restaurant {
-    font-weight: 400;
     font-size: u.rem(17);
+  }
+  &--plat {
+    white-space: nowrap;
+    font-size: u.rem(15);
   }
 }
 
