@@ -21,6 +21,10 @@ a {
   color: inherit;
 }
 
+input[type=checkbox] {
+  border: 0;
+}
+
 body,
 button {
   font-family: "Roboto", sans-serif;
@@ -365,6 +369,7 @@ footer .footer--container {
 .like input[type=checkbox] {
   height: 0;
   width: 0;
+  visibility: hidden;
 }
 .like__inactive {
   -webkit-animation: fadeIn 0.9s ease-out;
