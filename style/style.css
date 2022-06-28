@@ -417,6 +417,8 @@ footer .footer--container {
   background-color: hsl(0deg, 0%, 96%);
   z-index: 1;
   display: flex;
+  -webkit-animation: loader 3s;
+          animation: loader 3s;
 }
 .screen-loader .animation-wrapper {
   position: absolute;
