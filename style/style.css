@@ -776,6 +776,7 @@ footer .footer--container {
 }
 .plat__description {
   width: 90%;
+  margin-right: 5px;
 }
 .plat__prix {
   width: 10%;
