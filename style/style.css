@@ -372,8 +372,8 @@ footer .footer--container {
   visibility: hidden;
 }
 .like__inactive {
-  -webkit-animation: fadeIn 0.9s ease-out;
-          animation: fadeIn 0.9s ease-out;
+  -webkit-animation: fadeIn 1.5s ease-out;
+          animation: fadeIn 1.5s ease-out;
   transition: 0.2s;
 }
 .like__inactive:hover {
@@ -393,8 +393,8 @@ footer .footer--container {
   display: inline-block;
   color: hsl(267deg, 66%, 60%);
   opacity: 100%;
-  -webkit-animation: fadeIn 0.9s ease-out;
-          animation: fadeIn 0.9s ease-out;
+  -webkit-animation: fadeIn 1.5s ease-out;
+          animation: fadeIn 1.5s ease-out;
   transition: 0.2s;
 }
 .like input:checked ~ .like__active.fa-heart:hover {
