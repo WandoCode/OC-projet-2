@@ -643,10 +643,10 @@ footer .footer--container {
   justify-content: center;
   color: grey;
 }
-.fonctionnement .etape:hover {
+.fonctionnement .etape--hightlight {
   background-color: hsl(267deg, 100%, 96%);
 }
-.fonctionnement .etape:hover .etape__icone {
+.fonctionnement .etape--hightlight .etape__icone {
   color: hsl(267deg, 66%, 60%);
 }
 @media (min-width: 58.125em) {

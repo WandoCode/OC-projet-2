@@ -48,7 +48,7 @@
       color: grey;
     }
 
-    &:hover {
+    &--hightlight {
       background-color: c.$primary-light-clr;
       & .etape__icone {
         color: c.$primary-clr;
