@@ -1,9 +1,11 @@
 @use "../../util" as u;
 @use "../../globals/colors" as c;
+
 .header {
   padding-top: u.rem(10);
   &__logo {
     height: 54%;
+
     @include u.breakpoint(large) {
       margin-left: 8%;
     }

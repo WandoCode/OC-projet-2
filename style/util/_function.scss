@@ -1,5 +1,6 @@
 @use "sass:math";
 
+// Convert pixel to rem (16px on normal size)
 @function rem($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
@@ -8,6 +9,7 @@
   }
 }
 
+// Convert pixel to em (16px on normal size)
 @function em($pixel) {
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + em;

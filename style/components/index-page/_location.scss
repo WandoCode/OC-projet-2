@@ -21,6 +21,7 @@
     bottom: 10%;
     font-size: u.rem(17);
   }
+
   @include u.breakpoint(large) {
     position: absolute;
     top: u.rem(-63);

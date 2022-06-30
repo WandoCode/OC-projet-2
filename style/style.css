@@ -380,7 +380,7 @@ footer .footer--container {
   transform: scale(1.1);
 }
 .like__inactive:active {
-  transform: scale(1.2);
+  transform: scale(1.15);
   opacity: 50%;
 }
 .like__active.fa-heart {
@@ -401,7 +401,7 @@ footer .footer--container {
   transform: scale(1.1);
 }
 .like input:checked ~ .like__active.fa-heart:active {
-  transform: scale(1.2);
+  transform: scale(1.15);
   opacity: 50%;
 }
 .like--big {

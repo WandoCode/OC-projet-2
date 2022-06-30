@@ -1,5 +1,6 @@
 @use "../../globals/colors" as c;
 @use "../../util/" as u;
+
 .menu {
   background-color: c.$background-light-clr;
   display: flex;
@@ -33,10 +34,12 @@
     &__title {
       padding: u.rem(31) calc(u.rem(20) + 10%) 0 calc(u.rem(20) + 10%);
     }
+
     &__plats {
       width: 80%;
     }
   }
+
   @include u.breakpoint(large) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -44,14 +47,17 @@
     &__start {
       flex-basis: 100%;
     }
+
     &__title {
       padding: u.rem(31) u.rem(20) 0 u.rem(20);
       justify-content: flex-start;
       gap: u.rem(20);
     }
+
     &__btn {
       flex-basis: 100%;
     }
+
     &__plats {
       width: 29%;
       flex-grow: 1;

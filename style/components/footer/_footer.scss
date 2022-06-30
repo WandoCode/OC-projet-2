@@ -1,13 +1,16 @@
 @use "../../globals/colors" as c;
 @use "../../util/" as u;
+
 .footer {
   background-color: c.$background-dark-clr;
+
   &--container {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+
   &__logo {
     height: u.rem(17);
     filter: invert(100%);

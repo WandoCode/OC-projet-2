@@ -13,6 +13,7 @@
     align-items: center;
     gap: u.rem(23) 0;
   }
+
   & .etape {
     width: 94.54%;
     margin-left: u.rem(12);
@@ -59,6 +60,7 @@
     & {
       height: u.rem(350);
     }
+
     & .etapes-container {
       flex-direction: row;
       flex-wrap: wrap;
@@ -66,10 +68,12 @@
       height: 70%;
       margin: auto 0;
     }
+
     & .etape {
       white-space: nowrap;
       width: 25%;
       min-width: u.rem(270);
+
       &__icone {
         font-size: u.rem(20);
       }

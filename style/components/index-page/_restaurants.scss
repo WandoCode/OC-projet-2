@@ -1,5 +1,6 @@
 @use "../../globals/colors" as c;
 @use "../../util" as u;
+
 .restaurants {
   background-color: c.$background-light-clr;
   padding-bottom: u.rem(64);
@@ -8,6 +9,7 @@
     margin-bottom: u.rem(30);
     margin: u.rem(6) 0 u.rem(22);
   }
+
   &__container {
     display: flex;
     flex-direction: row;

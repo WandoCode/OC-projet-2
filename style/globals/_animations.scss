@@ -1,10 +1,10 @@
 @use "./colors" as c;
 @use "../util/" as u;
+
 @keyframes fadeIn {
   0% {
     opacity: 0%;
   }
-
   100% {
     opacity: 100%;
   }
@@ -15,7 +15,6 @@
     height: 100vh;
     width: 100vw;
   }
-
   90% {
     opacity: 1;
   }
@@ -42,7 +41,6 @@
   0% {
     transform: scale(1) translateY(0);
   }
-
   100% {
     transform: scale(0.1) translateY(-100%);
   }
