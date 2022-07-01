@@ -66,6 +66,9 @@
   &:hover &__description {
     width: calc(90% - u.rem(60));
   }
+  &:hover .fa-circle-check {
+    animation: spin 1s;
+  }
 
   &:hover &__title {
     width: calc(100% - u.rem(60));

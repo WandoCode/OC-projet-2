@@ -169,6 +169,28 @@ button {
     opacity: 100%;
   }
 }
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes loader {
   0% {
     height: 100vh;
@@ -803,6 +825,10 @@ footer .footer--container {
 }
 .plat:hover .plat__description {
   width: calc(90% - 3.75rem);
+}
+.plat:hover .fa-circle-check {
+  -webkit-animation: spin 1s;
+          animation: spin 1s;
 }
 .plat:hover .plat__title {
   width: calc(100% - 3.75rem);
